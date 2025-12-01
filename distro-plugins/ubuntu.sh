@@ -1,8 +1,8 @@
 # This is a default distribution plug-in.
 # Do not modify this file as your changes will be overwritten on next update.
 # If you want customize installation, please make a copy.
-DISTRO_NAME="Ubuntu (25.10)"
-DISTRO_COMMENT="Regular release (questing)."
+DISTRO_NAME="Ubuntu (24.04)"
+DISTRO_COMMENT="Regular release (noble)."
 
 TARBALL_URL['aarch64']="https://github.com/termux/proot-distro/releases/download/v4.11.0/ubuntu-noble-aarch64-pd-v4.11.0.tar.xz"
 TARBALL_URL['arm']="https://github.com/termux/proot-distro/releases/download/v4.11.0/ubuntu-noble-aarch64-pd-v4.11.0.tar.xz"
