@@ -1,7 +1,7 @@
 dist_name="Ubuntu"
 
 # After changing, update the DISTRO_NAME below.
-dist_version="questing"
+dist_version="noble"
 
 bootstrap_distribution() {
 	sudo rm -f "${ROOTFS_DIR}"/ubuntu-"${dist_version}"-*.tar.xz
@@ -44,12 +44,9 @@ write_plugin() {
 	DISTRO_NAME="Ubuntu (24.04)"
 	DISTRO_COMMENT="Regular release (${dist_version})."
 
-	TARBALL_URL['aarch64']="https://github.com/termux/proot-distro/releases/download/v4.11.0/ubuntu-jammy-aarch64-pd-v4.11.0.tar.xz"
-	TARBALL_SHA256['aarch64']="https://github.com/termux/proot-distro/releases/download/v4.11.0/ubuntu-jammy-aarch64-pd-v4.11.0.tar.xz" | awk '{ print $1}')"
-	TARBALL_URL['arm']="${GIT_RELEASE_URL}/ubuntu-${dist_version}-arm-pd-${CURRENT_VERSION}.tar.xz"
-	TARBALL_SHA256['arm']="$(sha256sum "${ROOTFS_DIR}/ubuntu-${dist_version}-arm-pd-${CURRENT_VERSION}.tar.xz" | awk '{ print $1}')"
+	TARBALL_URL['aarch64']="https://github.com/termux/proot-distro/releases/download/v4.11.0/ubuntu-noble-aarch64-pd-v4.11.0.tar.xz"
+	TARBALL_URL['https://github.com/termux/proot-distro/releases/download/v4.11.0/ubuntu-noble-aarch64-pd-v4.11.0.tar.xz"
 	TARBALL_URL['x86_64']="${GIT_RELEASE_URL}/ubuntu-${dist_version}-x86_64-pd-${CURRENT_VERSION}.tar.xz"
-	TARBALL_SHA256['x86_64']="$(sha256sum "${ROOTFS_DIR}/ubuntu-${dist_version}-x86_64-pd-${CURRENT_VERSION}.tar.xz" | awk '{ print $1}')"
 
 	distro_setup() {
 	${TAB}# Configure en_US.UTF-8 locale.
